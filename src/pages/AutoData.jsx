@@ -9,7 +9,7 @@ const AutoData = () => {
   // Fetch Total PnL
   const fetchTotalPnL = async () => {
     try {
-      const res = await fetch("https://node-bot-eth.onrender.com/api/pnl/total");
+      const res = await fetch("http://3.108.63.70:4000/api/pnl/total");
       const data = await res.json();
       setTotalPnL(data.totalPnL);
     } catch (err) {
@@ -20,7 +20,7 @@ const AutoData = () => {
   // Fetch Trade History
   const fetchHistory = async () => {
     try {
-      const res = await fetch("https://node-bot-eth.onrender.com/api/pnl/history");
+      const res = await fetch("http://3.108.63.70:4000/api/pnl/history");
       const data = await res.json();
       setHistory(data);
     } catch (err) {
