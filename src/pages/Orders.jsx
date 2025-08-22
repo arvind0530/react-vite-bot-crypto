@@ -1,7 +1,6 @@
 // src/pages/Orders.jsx
 import React, { useMemo, useState } from "react";
 import { useGetOrdersQuery, useCancelOrderMutation, useEditOrderMutation } from "../redux/orders/api";
-import "bootstrap/dist/css/bootstrap.min.css";
 
 const StatusBadge = ({ state }) => {
   const map = {

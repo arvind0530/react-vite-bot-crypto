@@ -1,6 +1,5 @@
 // src/components/AutoData.jsx
 import React, { useEffect, useState } from "react";
-import "bootstrap/dist/css/bootstrap.min.css";
 
 const AutoData = () => {
   const [totalPnL, setTotalPnL] = useState(0);

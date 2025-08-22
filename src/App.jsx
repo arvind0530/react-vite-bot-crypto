@@ -1,8 +1,9 @@
 import React from 'react';
 import { Routes, Route, Link } from 'react-router-dom';
+import "bootstrap/dist/css/bootstrap.min.css";
+import "bootstrap/dist/js/bootstrap.bundle.min.js"; // 🔥 This enables navbar toggle
 import Login from './pages/Login';
 import Navbar from './components/Navbar';
-import "bootstrap/dist/css/bootstrap.min.css";
 import "./assets/css/TradingDashboard.css";
 import "./assets/css/EnhancedStyles.css";
 import EthLive from './pages/EthLive';

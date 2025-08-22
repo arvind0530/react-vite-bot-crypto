@@ -12,7 +12,6 @@ import {
   Legend,
 } from "chart.js";
 import { initDeltaSocket } from "../services/deltaSocket";
-import "bootstrap/dist/css/bootstrap.min.css";
 
 ChartJS.register(CategoryScale, LinearScale, PointElement, LineElement, Title, Tooltip, Legend);
 
