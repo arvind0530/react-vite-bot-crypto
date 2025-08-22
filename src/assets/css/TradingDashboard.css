@@ -1,0 +1,412 @@
+
+/* TradingDashboard.css - Complete styling for enhanced trading interface */
+
+:root {
+  --primary-color: #4285f4;
+  --success-color: #00c851;
+  --warning-color: #ffbb33;
+  --danger-color: #ff4444;
+  --info-color: #33b5e5;
+  --dark-color: #2c3e50;
+  --light-color: #f8f9fa;
+  --border-radius: 12px;
+  --box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Global styles */
+body {
+  font-family: 'Inter', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: #f5f7fa;
+}
+
+.trading-dashboard {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  min-height: 100vh;
+  padding: 1rem 0;
+}
+
+/* Enhanced card styles */
+.card {
+  border: none;
+  border-radius: var(--border-radius);
+  box-shadow: var(--box-shadow);
+  transition: var(--transition);
+  overflow: hidden;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+}
+
+.card-header {
+  background: linear-gradient(135deg, var(--primary-color), #0d47a1);
+  color: white;
+  border: none;
+  font-weight: 600;
+  padding: 1.25rem;
+}
+
+.card-body {
+  padding: 1.5rem;
+}
+
+/* Button enhancements */
+.btn {
+  border-radius: 8px;
+  font-weight: 600;
+  transition: var(--transition);
+  border: none;
+  padding: 0.75rem 1.5rem;
+}
+
+.btn:hover {
+  transform: translateY(-2px);
+}
+
+.btn-success {
+  background: linear-gradient(135deg, var(--success-color), #00a63f);
+  box-shadow: 0 4px 15px rgba(0, 200, 81, 0.3);
+}
+
+.btn-warning {
+  background: linear-gradient(135deg, var(--warning-color), #ff8800);
+  color: white;
+  box-shadow: 0 4px 15px rgba(255, 187, 51, 0.3);
+}
+
+.btn-danger {
+  background: linear-gradient(135deg, var(--danger-color), #cc0000);
+  box-shadow: 0 4px 15px rgba(255, 68, 68, 0.3);
+}
+
+.btn-primary {
+  background: linear-gradient(135deg, var(--primary-color), #0d47a1);
+  box-shadow: 0 4px 15px rgba(66, 133, 244, 0.3);
+}
+
+.btn-outline-danger {
+  border: 2px solid var(--danger-color);
+  color: var(--danger-color);
+  background: transparent;
+}
+
+.btn-outline-danger:hover {
+  background: var(--danger-color);
+  color: white;
+}
+
+/* Table enhancements */
+.table {
+  border-radius: 8px;
+  overflow: hidden;
+  margin-bottom: 0;
+}
+
+.table th {
+  background: var(--light-color);
+  font-weight: 600;
+  text-transform: uppercase;
+  font-size: 0.85rem;
+  letter-spacing: 0.5px;
+  border: none;
+  padding: 1rem 0.75rem;
+  color: var(--dark-color);
+}
+
+.table td {
+  padding: 1rem 0.75rem;
+  vertical-align: middle;
+  border-color: #e9ecef;
+}
+
+.table-hover tbody tr:hover {
+  background-color: rgba(66, 133, 244, 0.05);
+}
+
+.table-dark th {
+  background: var(--dark-color);
+  color: white;
+}
+
+/* Badge styles */
+.badge {
+  font-weight: 600;
+  padding: 0.5em 0.75em;
+  border-radius: 6px;
+  font-size: 0.8rem;
+}
+
+.bg-success {
+  background: linear-gradient(135deg, var(--success-color), #00a63f) !important;
+}
+
+.bg-warning {
+  background: linear-gradient(135deg, var(--warning-color), #ff8800) !important;
+}
+
+.bg-danger {
+  background: linear-gradient(135deg, var(--danger-color), #cc0000) !important;
+}
+
+.bg-info {
+  background: linear-gradient(135deg, var(--info-color), #0099cc) !important;
+}
+
+.bg-primary {
+  background: linear-gradient(135deg, var(--primary-color), #0d47a1) !important;
+}
+
+.bg-secondary {
+  background: linear-gradient(135deg, #6c757d, #495057) !important;
+}
+
+/* Form controls */
+.form-control {
+  border-radius: 8px;
+  border: 2px solid #e9ecef;
+  transition: var(--transition);
+  padding: 0.75rem;
+}
+
+.form-control:focus {
+  border-color: var(--primary-color);
+  box-shadow: 0 0 0 0.2rem rgba(66, 133, 244, 0.25);
+}
+
+.form-control-lg {
+  padding: 1rem;
+  font-size: 1.1rem;
+}
+
+/* Alert styles */
+.alert {
+  border-radius: var(--border-radius);
+  border: none;
+  padding: 1rem 1.5rem;
+}
+
+.alert-info {
+  background: linear-gradient(135deg, rgba(51, 181, 229, 0.1), rgba(0, 153, 204, 0.1));
+  color: var(--info-color);
+  border-left: 4px solid var(--info-color);
+}
+
+/* Auto trading status */
+.auto-trading-active {
+  position: relative;
+  overflow: hidden;
+}
+
+.auto-trading-active::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+  animation: shimmer 2s infinite;
+}
+
+@keyframes shimmer {
+  0% { left: -100%; }
+  100% { left: 100%; }
+}
+
+/* Price display */
+.price-display h2 {
+  background: linear-gradient(135deg, var(--primary-color), var(--success-color));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  font-weight: 800;
+  margin: 0;
+}
+
+/* Status indicators */
+.status-indicator {
+  position: relative;
+  padding-left: 20px;
+}
+
+.status-indicator::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  animation: pulse-dot 2s infinite;
+}
+
+.status-indicator.active::before {
+  background: var(--success-color);
+}
+
+.status-indicator.inactive::before {
+  background: var(--danger-color);
+}
+
+@keyframes pulse-dot {
+  0%, 100% {
+    transform: translateY(-50%) scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: translateY(-50%) scale(1.2);
+    opacity: 0.7;
+  }
+}
+
+/* Loading spinner */
+.spinner-border {
+  animation: spinner-rotation 0.75s linear infinite;
+}
+
+@keyframes spinner-rotation {
+  to { transform: rotate(360deg); }
+}
+
+/* Responsive design */
+@media (max-width: 992px) {
+  .card-body {
+    padding: 1rem;
+  }
+
+  .btn {
+    padding: 0.6rem 1.2rem;
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .trading-dashboard {
+    padding: 0.5rem 0;
+  }
+
+  .card-header {
+    padding: 1rem;
+  }
+
+  .table-responsive {
+    font-size: 0.875rem;
+  }
+
+  .btn-lg {
+    padding: 0.75rem 1rem;
+    font-size: 1rem;
+  }
+
+  .badge {
+    font-size: 0.75rem;
+    padding: 0.4em 0.6em;
+  }
+
+  .alert {
+    padding: 0.75rem 1rem;
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .container-fluid {
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+  }
+
+  .card {
+    margin-bottom: 1rem;
+  }
+
+  .table {
+    font-size: 0.8rem;
+  }
+
+  .btn {
+    font-size: 0.875rem;
+    padding: 0.5rem 1rem;
+  }
+
+  .price-display h2 {
+    font-size: 1.8rem;
+  }
+}
+
+/* Animation utilities */
+.animate-fadeIn {
+  animation: fadeIn 0.6s ease-out;
+}
+
+.animate-slideUp {
+  animation: slideUp 0.6s ease-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Profit/Loss row highlighting */
+.table tbody tr.profit-row {
+  background: linear-gradient(135deg, rgba(0, 200, 81, 0.05), rgba(0, 166, 63, 0.05));
+  border-left: 3px solid var(--success-color);
+}
+
+.table tbody tr.loss-row {
+  background: linear-gradient(135deg, rgba(255, 68, 68, 0.05), rgba(204, 0, 0, 0.05));
+  border-left: 3px solid var(--danger-color);
+}
+
+/* Custom scrollbar */
+.table-responsive::-webkit-scrollbar {
+  height: 8px;
+}
+
+.table-responsive::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 4px;
+}
+
+.table-responsive::-webkit-scrollbar-thumb {
+  background: var(--primary-color);
+  border-radius: 4px;
+}
+
+.table-responsive::-webkit-scrollbar-thumb:hover {
+  background: #0d47a1;
+}
+
+/* Chart container */
+.chart-container {
+  background: white;
+  border-radius: var(--border-radius);
+  padding: 1rem;
+  box-shadow: var(--box-shadow);
+  position: relative;
+}
+
+.chart-container::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, var(--primary-color), var(--success-color), var(--warning-color), var(--danger-color));
+  border-radius: var(--border-radius) var(--border-radius) 0 0;
+}

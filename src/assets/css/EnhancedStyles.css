@@ -1,0 +1,355 @@
+
+/* Enhanced styles for LiveChart component */
+/* Add this to your main CSS file or create a separate LiveChart.css */
+
+.live-chart-container {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  min-height: 100vh;
+  font-family: 'Inter', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.card {
+  transition: all 0.3s ease;
+  border-radius: 12px !important;
+}
+
+.card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(0,0,0,0.15) !important;
+}
+
+.btn {
+  border-radius: 8px !important;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.btn:hover {
+  transform: translateY(-1px);
+}
+
+.btn-success {
+  background: linear-gradient(135deg, #00c851, #00a63f);
+  border: none;
+  box-shadow: 0 4px 15px rgba(0, 200, 81, 0.3);
+}
+
+.btn-warning {
+  background: linear-gradient(135deg, #ffbb33, #ff8800);
+  border: none;
+  color: white;
+  box-shadow: 0 4px 15px rgba(255, 187, 51, 0.3);
+}
+
+.btn-danger {
+  background: linear-gradient(135deg, #ff4444, #cc0000);
+  border: none;
+  box-shadow: 0 4px 15px rgba(255, 68, 68, 0.3);
+}
+
+.btn-primary {
+  background: linear-gradient(135deg, #4285f4, #0d47a1);
+  border: none;
+  box-shadow: 0 4px 15px rgba(66, 133, 244, 0.3);
+}
+
+.table {
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.table th {
+  background: #f8f9fa;
+  font-weight: 600;
+  text-transform: uppercase;
+  font-size: 0.85rem;
+  letter-spacing: 0.5px;
+  border: none;
+  padding: 1rem 0.75rem;
+}
+
+.table td {
+  padding: 0.75rem;
+  vertical-align: middle;
+  border-color: #e9ecef;
+}
+
+.table-hover tbody tr:hover {
+  background-color: rgba(0,123,255,0.05);
+}
+
+.badge {
+  font-weight: 600;
+  padding: 0.5em 0.75em;
+  border-radius: 6px;
+}
+
+.alert {
+  border-radius: 10px;
+  border: none;
+}
+
+.form-control {
+  border-radius: 8px;
+  border: 2px solid #e9ecef;
+  transition: all 0.3s ease;
+}
+
+.form-control:focus {
+  border-color: #4285f4;
+  box-shadow: 0 0 0 0.2rem rgba(66, 133, 244, 0.25);
+}
+
+.card-header {
+  border-radius: 12px 12px 0 0 !important;
+  border: none !important;
+  font-weight: 600;
+}
+
+.text-success {
+  color: #00c851 !important;
+}
+
+.text-danger {
+  color: #ff4444 !important;
+}
+
+.text-warning {
+  color: #ffbb33 !important;
+}
+
+.text-info {
+  color: #33b5e5 !important;
+}
+
+.text-primary {
+  color: #4285f4 !important;
+}
+
+.bg-success {
+  background: linear-gradient(135deg, #00c851, #00a63f) !important;
+}
+
+.bg-danger {
+  background: linear-gradient(135deg, #ff4444, #cc0000) !important;
+}
+
+.bg-warning {
+  background: linear-gradient(135deg, #ffbb33, #ff8800) !important;
+}
+
+.bg-info {
+  background: linear-gradient(135deg, #33b5e5, #0099cc) !important;
+}
+
+.bg-primary {
+  background: linear-gradient(135deg, #4285f4, #0d47a1) !important;
+}
+
+.bg-dark {
+  background: linear-gradient(135deg, #2c3e50, #34495e) !important;
+}
+
+/* Custom animations */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.animate-fadeInUp {
+  animation: fadeInUp 0.6s ease-out;
+}
+
+.animate-pulse {
+  animation: pulse 2s infinite;
+}
+
+/* Loading spinner enhancement */
+.spinner-border {
+  animation: spinner-border 0.75s linear infinite;
+}
+
+@keyframes spinner-border {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Price display enhancement */
+.price-display {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Auto trading status indicator */
+.auto-trading-active {
+  position: relative;
+  overflow: hidden;
+}
+
+.auto-trading-active::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+  animation: shimmer 2s infinite;
+}
+
+@keyframes shimmer {
+  0% {
+    left: -100%;
+  }
+  100% {
+    left: 100%;
+  }
+}
+
+/* Responsive improvements */
+@media (max-width: 768px) {
+  .card-body {
+    padding: 1rem;
+  }
+
+  .table-responsive {
+    font-size: 0.875rem;
+  }
+
+  .btn-lg {
+    padding: 0.75rem 1rem;
+    font-size: 1rem;
+  }
+
+  .badge {
+    font-size: 0.75rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .container-fluid {
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+  }
+
+  .card {
+    margin-bottom: 1rem;
+  }
+
+  .table {
+    font-size: 0.8rem;
+  }
+
+  .btn {
+    font-size: 0.875rem;
+  }
+}
+
+/* Chart container enhancements */
+.chart-container {
+  position: relative;
+  background: white;
+  border-radius: 12px;
+  padding: 1rem;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.chart-container::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, #4285f4, #00c851, #ffbb33, #ff4444);
+  border-radius: 12px 12px 0 0;
+}
+
+/* Status indicators */
+.status-online {
+  position: relative;
+  color: #00c851;
+}
+
+.status-online::before {
+  content: '';
+  position: absolute;
+  left: -15px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 8px;
+  height: 8px;
+  background: #00c851;
+  border-radius: 50%;
+  animation: pulse 2s infinite;
+}
+
+.status-offline {
+  position: relative;
+  color: #ff4444;
+}
+
+.status-offline::before {
+  content: '';
+  position: absolute;
+  left: -15px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 8px;
+  height: 8px;
+  background: #ff4444;
+  border-radius: 50%;
+}
+
+/* Profit/Loss highlighting */
+.pnl-positive {
+  background: linear-gradient(135deg, rgba(0, 200, 81, 0.1), rgba(0, 166, 63, 0.1));
+  border-left: 4px solid #00c851;
+}
+
+.pnl-negative {
+  background: linear-gradient(135deg, rgba(255, 68, 68, 0.1), rgba(204, 0, 0, 0.1));
+  border-left: 4px solid #ff4444;
+}
+
+/* Enhanced tooltips */
+.tooltip-custom {
+  position: relative;
+  display: inline-block;
+}
+
+.tooltip-custom:hover::after {
+  content: attr(data-tooltip);
+  position: absolute;
+  bottom: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  background: rgba(0,0,0,0.8);
+  color: white;
+  padding: 0.5rem;
+  border-radius: 4px;
+  font-size: 0.8rem;
+  white-space: nowrap;
+  z-index: 1000;
+}
