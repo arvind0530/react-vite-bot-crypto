@@ -32,7 +32,7 @@ export default function Navbar() {
               <Link className="nav-link px-3 border rounded" to="/tradingview">TradingView</Link>
             </li>
             <li className="nav-item">
-              <Link className="nav-link px-3 border rounded" to="/orders">Orders</Link>
+              <Link className="nav-link px-3 border rounded" to="/tradingbotdashboardmve">Dashboard MVE</Link>
             </li>
             <li className="nav-item">
               <Link className="nav-link px-3 border rounded" to="/ethlive">ETH Live</Link>
