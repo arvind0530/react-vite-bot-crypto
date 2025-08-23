@@ -9,6 +9,7 @@ import "./assets/css/EnhancedStyles.css";
 import EthLive from './pages/EthLive';
 import AutoData from './pages/AutoData';
 import BtcLive from './pages/BtcLive';
+import TradingBotDashboardMve from './pages/TradingBotDashboardMve';
 
 export default function App() {
   return (
@@ -21,6 +22,7 @@ export default function App() {
       <hr />
       <Routes>
         <Route path="/" element={<Login />} />
+        <Route path="/tradingbotdashboardmve" element={<TradingBotDashboardMve  />} />
         <Route path="/ethlive" element={<EthLive  />} />
         <Route path="/btclive" element={<BtcLive  />} />
         <Route path="/autodata" element={<AutoData  />} />
